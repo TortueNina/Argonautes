@@ -1,0 +1,276 @@
+/* CSS Document */
+body {
+  background-color: grey;
+  background-image: url("images/bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center; 
+	font-family: Papyrus,fantasy;
+}
+
+
+/*-------------------> DEBUT HEADER <-------------------*/
+
+.item-a {
+  text-align: center;
+  padding-top: 2.5em;
+  grid-area: header; 
+}
+
+
+/*-------------------> FIN HEADER <-------------------*/
+
+/*-------------------> DEBUT MAIN <-------------------*/
+
+.add-form{
+	padding-top: 3em;
+}
+
+#name{
+	background-color: transparent;
+	border-top-style: hidden;
+  	border-right-style: hidden;
+  	border-left-style: hidden;
+	border-bottom: 1px black solid;
+}
+#name:focus{
+	outline: none;
+}
+
+#button{
+	background-color: transparent;
+	border-top-style: hidden;
+	border-bottom-style: hidden;
+  	border-right-style: hidden;
+  	border-left-style: hidden;
+	font-size: 1.5em;
+	color:antiquewhite;
+}
+
+.plume{
+	text-shadow: 1px 1px black;
+}
+.plume:hover{
+	text-shadow: -1px -1px black;
+}
+
+.item-b {
+  grid-area: main; 
+}
+
+
+.list{
+	padding-top: 2em;
+}
+
+.list-name{
+  	column-count: 3;
+  	column-fill: balance;
+}
+
+
+/*-------------------> FIN MAIN <-------------------*/
+
+/*-------------------> DEBUT FOOTER <-------------------*/
+
+.item-c {
+  padding-top: 3em;
+  grid-area: footer; 
+}
+
+
+.row {
+  display: flex; 
+}
+
+.column {
+  flex: 50%;
+}
+
+.left{
+	text-align: center;
+}
+.right{
+	text-align: end;
+}
+
+.vanina{
+	color: antiquewhite;
+	text-decoration: none;
+	text-shadow: 1px 1px black;
+}
+.vanina:visited{
+	background-color: transparent;
+}
+.vanina:hover{
+	text-shadow: -1px -1px black;
+}
+.vanina:active{
+	background-color: transparent;
+}
+
+.logo{
+	height: 2.5em;
+	padding-right: 3.5em;
+	filter: drop-shadow(1px 1px black);
+}
+.logo:hover{
+	filter: drop-shadow(-1px -1px black);
+}
+
+/*-------------------> FIN FOOTER <-------------------*/
+
+
+.container {
+  display: grid;
+  grid-template-columns: auto 30em auto;
+  grid-auto-rows: 10em 43em 8em;
+  grid-template-areas: ". header ." ". main ." ". footer ."; 
+}
+
+
+/*-------------------> DÉBUT MÉDIA QUERIES <-------------------*/
+
+/*
+320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV
+*/
+
+/*Desktops, 24"*/
+@media screen and (max-width: 1920px) {
+	  .item-a {
+		  padding-top: 4.5em;
+		}
+	
+		.item-c {
+	  padding-top: 4.8em;
+	}
+}
+
+/*Big laptop, 15"*/
+@media screen and (max-width: 1440px) {
+	.container{
+		margin-top: 3em;
+		font-size: .8em;
+		grid-auto-rows: 10em 41em 8em;
+	}
+	  .item-a {
+		  padding-top: 3em!important;
+		}
+	
+		.item-c {
+	  padding-top: 1.5em!important;
+	}
+	.logo{
+	padding-right: 4em;
+}
+}
+
+/*Small laptop, 13"*/
+@media screen and (max-width: 1280px) {
+	 .container{
+		margin-top: 4em;
+		font-size: .75em;
+		grid-auto-rows: 10em 40em 8em;
+	}
+	  .item-a {
+		  padding-top: 3.5em!important;
+		}
+	
+		.item-c {
+	  padding-top: 1em!important;
+	}
+	.logo{
+	padding-right: 4.5em;
+}
+}
+
+/*iPads, landscapes*/
+@media screen and (max-width: 1024px) {
+	   .container{
+		margin-top: 5em;
+		font-size: .7em;
+		grid-auto-rows: 10em 39em 8em;
+	}
+	  .item-a {
+		  padding-top: 4.4em!important;
+		}
+	.add-form{
+	padding-top: 2em;
+}
+
+	.list{
+	padding-top: 1em;
+}
+	
+		.item-c {
+	  padding-top: 1em!important;
+	}
+	.logo{
+	padding-right: 4.8em;
+}
+}
+
+/*iPads, portraits*/
+@media screen and (max-width: 768px) {
+	
+	body {
+  background-size: 250%;
+  background-position: center; 
+}
+
+	     .container{
+		margin-top: 0;
+		font-size: 1em;
+		grid-auto-rows: 10em 43em 8em;
+	}
+	  .item-a {
+		  padding-top: 3em!important;
+		}
+	
+	.add-form{
+	padding-top: 3em;
+}
+
+	.list{
+	padding-top: 1.5em;
+}
+	
+		.item-c {
+	  padding-top: 3em!important;
+	}
+	.logo{
+	padding-right: 3.5em;
+}
+}
+
+/*Iphone X, (h:812)*/
+@media screen and (max-width: 480px) and (max-height:812px){
+	.container {
+  display:contents;
+
+}
+	
+}
+
+/*Iphone 8, (h:667)*/
+@media screen and (max-width: 480px) and (max-height:667px){
+	  .item-a {
+		  padding-top: 3.5em;
+		}
+	
+		.item-c {
+	  padding-top: 4em;
+	}
+}
+
+
+
+
+
+/*-------------------> FIN MÉDIA QUERIES <-------------------*/
+
